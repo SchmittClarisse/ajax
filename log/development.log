@@ -1,0 +1,148 @@
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE DATABASE "todolist-app_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "todolist-app_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (41.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(34377518426153490)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (42.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(34377518426153490)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Create (28.1ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Essay"], ["created_at", "2021-06-03 20:25:38.959068"], ["updated_at", "2021-06-03 20:25:38.959068"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (55.9ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.070648"], ["updated_at", "2021-06-03 20:25:39.070648"], ["title", "A Passage to India"], ["deadline", "2022-04-03 00:00:00"], ["category_id", 7], ["image", "https://robohash.org/nostrumvoluptasperspiciatis.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.132348"], ["updated_at", "2021-06-03 20:25:39.132348"], ["title", "The Wealth of Nations"], ["deadline", "2021-12-02 00:00:00"], ["category_id", 7], ["image", "https://robohash.org/quodnequeipsum.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.149470"], ["updated_at", "2021-06-03 20:25:39.149470"], ["title", "Noli Me Tangere"], ["deadline", "2021-08-01 00:00:00"], ["category_id", 7], ["image", "https://robohash.org/corporisetpossimus.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Fantasy"], ["created_at", "2021-06-03 20:25:39.153089"], ["updated_at", "2021-06-03 20:25:39.153089"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.165822"], ["updated_at", "2021-06-03 20:25:39.165822"], ["title", "The Lathe of Heaven"], ["deadline", "2022-03-04 00:00:00"], ["category_id", 8], ["image", "https://robohash.org/sitdictaodit.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (8.5ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.173602"], ["updated_at", "2021-06-03 20:25:39.173602"], ["title", "Fair Stood the Wind for France"], ["deadline", "2021-11-13 00:00:00"], ["category_id", 8], ["image", "https://robohash.org/quasivoluptatumrepudiandae.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (9.8ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.191465"], ["updated_at", "2021-06-03 20:25:39.191465"], ["title", "That Hideous Strength"], ["deadline", "2022-02-07 00:00:00"], ["category_id", 8], ["image", "https://robohash.org/sitquasiquidem.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Create (5.1ms)[0m  [1m[32mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Folklore"], ["created_at", "2021-06-03 20:25:39.206738"], ["updated_at", "2021-06-03 20:25:39.206738"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (1.8ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.223331"], ["updated_at", "2021-06-03 20:25:39.223331"], ["title", "Ring of Bright Water"], ["deadline", "2022-03-18 00:00:00"], ["category_id", 9], ["image", "https://robohash.org/doloresaddistinctio.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (3.3ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.239934"], ["updated_at", "2021-06-03 20:25:39.239934"], ["title", "In a Glass Darkly"], ["deadline", "2021-10-31 00:00:00"], ["category_id", 9], ["image", "https://robohash.org/utavoluptas.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTask Create (4.0ms)[0m  [1m[32mINSERT INTO "tasks" ("created_at", "updated_at", "title", "deadline", "category_id", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2021-06-03 20:25:39.252530"], ["updated_at", "2021-06-03 20:25:39.252530"], ["title", "Butter In a Lordly Dish"], ["deadline", "2022-02-13 00:00:00"], ["category_id", 9], ["image", "https://robohash.org/etautfugiat.png?size=300x300&set=set1"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mEmail Create (1.6ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Grand Line"], ["body", "Quaerat ut aut. Quibusdam ipsa cum. Id quisquam et."], ["created_at", "2021-06-03 20:25:39.301075"], ["updated_at", "2021-06-03 20:25:39.301075"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mEmail Create (0.8ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "East Blue"], ["body", "Velit omnis qui. Sint aut commodi. Molestiae in tenetur."], ["created_at", "2021-06-03 20:25:39.308136"], ["updated_at", "2021-06-03 20:25:39.308136"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mEmail Create (0.6ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "East Blue"], ["body", "Iure dolores qui. Sapiente ipsa eos. Quo sunt velit."], ["created_at", "2021-06-03 20:25:39.314561"], ["updated_at", "2021-06-03 20:25:39.314561"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+Started GET "/" for ::1 at 2021-06-03 22:26:02 +0200
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Saru_VII/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (31.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/index.html.erb within layouts/application (54.5ms)
+Started GET "/" for ::1 at 2021-06-03 22:26:06 +0200
+Processing by EmailsController#index as HTML
+  Rendering emails/index.html.erb within layouts/application
+  [1m[36mEmail Load (5.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/views/emails/index.html.erb:21
+  Rendered emails/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_navbar.html.erb (14.9ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 5081ms (Views: 5030.8ms | ActiveRecord: 37.9ms)
+
+
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 2735ms (Views: 2726.5ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/emails" for ::1 at 2021-06-03 22:28:22 +0200
+Processing by EmailsController#create as JS
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:31
+  [1m[36mEmail Create (1.3ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "All Blue"], ["body", "Repudiandae placeat amet. Perspiciatis quibusdam voluptas. Optio in occaecati."], ["created_at", "2021-06-03 20:28:23.058196"], ["updated_at", "2021-06-03 20:28:23.058196"]]
+  ↳ app/controllers/emails_controller.rb:31
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:31
+  Rendering emails/create.js.erb
+  Rendered emails/_email.html.erb (0.9ms)
+  Rendered emails/create.js.erb (5.5ms)
+Completed 200 OK in 489ms (Views: 9.5ms | ActiveRecord: 43.9ms)
+
+

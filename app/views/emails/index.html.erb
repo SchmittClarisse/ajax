@@ -1,0 +1,84 @@
+<h1>Emails</h1>
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container-fluid">
+  <h2 class="grid-title"><i class="fa fa-inbox"></i> Inbox</h2>
+  <a href="/emails" data-method="post" class="btn btn-success" data-remote="true">Recevoir un email</a>
+  <div class="row">
+    <!-- BEGIN INBOX -->
+    <div class="col-md-12">
+      <div class="grid email">
+        <div class="grid-body">
+          <div class="row">
+            <!-- BEGIN INBOX MENU -->
+
+            <!-- END INBOX MENU -->
+            <!-- BEGIN INBOX CONTENT -->
+            <div class=" col-md-6">
+              <div class="padding"></div>
+              <div class="table-responsive">
+                <table class="table" id ="email">
+                  <% @emails.each do |email| %>
+                    <tbody>
+                      <tr id="<%=email.id.to_s%>">
+                        <td class="action"><input type="checkbox" /></td>
+                        <td class="action"><i class="fa fa-star-o"></i></td>
+                        <td class="action"><i class="fa fa-bookmark-o"></i></td>
+                        <td class="name"><%= link_to email.object , email, remote: true %></td>
+                        <td class="subject"><%= email.body %></td>
+                      </tr>
+                    </tbody>
+                  <%end%>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-6" id="show">
+            </div>
+            <!-- END INBOX CONTENT -->
+            <!-- BEGIN COMPOSE MESSAGE -->
+            <div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-wrapper">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header bg-blue">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title"><i class="fa fa-envelope"></i> Compose New Message</h4>
+                    </div>
+                    <form action="#" method="post">
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <input name="to" type="email" class="form-control" placeholder="To">
+                        </div>
+                        <div class="form-group">
+                          <input name="cc" type="email" class="form-control" placeholder="Cc">
+                        </div>
+                        <div class="form-group">
+                          <input name="bcc" type="email" class="form-control" placeholder="Bcc">
+                        </div>
+                        <div class="form-group">
+                          <input name="subject" type="email" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" id="email_message" class="form-control" placeholder="Message" style="height: 120px;"></textarea>
+                        </div>
+                        <div class="form-group">														<input type="file" name="attachment">
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Discard</button>
+                        <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-envelope"></i> Send Message</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END COMPOSE MESSAGE -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END INBOX -->
+  </div>
+</div>
+<%= link_to 'New Email', new_email_path %>

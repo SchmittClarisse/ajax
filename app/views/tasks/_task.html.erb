@@ -1,0 +1,10 @@
+<li id="task_<%= j task.id.to_s %>">
+  <%= task.title %>,
+  "Deadline : " <%=  task.deadline.strftime("%D")  %>
+  <%= link_to edit_task_path(task) do %>
+    <i class="fa fa-edit"></i>
+  <% end %>
+  <%= link_to task_path(task), method: "delete", remote: true do %>
+    <i class="fa fa-trash"></i>
+  <% end %>
+</li>

@@ -1,0 +1,4 @@
+alert("task created!");
+
+console.log("task_list_" + "<%= j @task.category.title.gsub(/[ \/\\,:]/,"-") %>")
+document.getElementById("task_list_" + "<%= j @task.category.title.gsub(/[ \/\\,:]/,"-") %>").insertAdjacentHTML("beforeend", "<%= j render 'tasks/task', task: @task %>")

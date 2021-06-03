@@ -1,0 +1,9 @@
+<tbody>
+  <tr id="<%=email.id.to_s%>">
+    <td class="action"><input type="checkbox" /></td>
+    <td class="action"><i class="fa fa-star-o"></i></td>
+    <td class="action"><i class="fa fa-bookmark-o"></i></td>
+    <td class="name"><%= link_to email.object , email, remote: true %></td>
+    <td class="subject"><%= email.body %></td>
+  </tr>
+</tbody>
